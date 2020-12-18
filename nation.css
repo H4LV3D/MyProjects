@@ -1,0 +1,101 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.load{
+    background-color: #b66c6c;
+    font-size: 1.2em;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: linear; 
+    
+    -webkit-animation-duration: 10s;animation-duration: 10s;
+    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+    height: 100%;
+    width: 100%;
+}
+div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pic1{
+    border-radius: 50%;
+    border: 3px solid #000;
+    height: 200px;
+    width: 200px;
+    
+    transition: all 800ms;
+    animation: loading 1s linear 6;
+}
+.pic1:hover{
+    
+    transform: rotate(360deg);
+}
+@keyframes loading{
+    0%{transform: rotate(0deg);filter: saturate(50%);}
+    25%{transform: rotate(90deg);filter: grayscale(100%);}
+    50%{transform: rotate(180deg);filter: grayscale(0);}
+    75%{transform: rotate(270deg);filter: saturate(50%);}
+    100%{transform: rotate(360deg);filter: saturate(0%);}
+}
+.loaded{
+    font-family: 'Lobster', cursive; 
+    font-size: 30px;
+    font-weight: 700;
+    margin: 30px;
+
+}
+@-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+ }
+ 
+ .load {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+font-family: 'Lobster', cursive; */
+
+.btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    
+    text-transform: uppercase;
+    
+    padding: 15px 20px;
+    
+    color: #000;
+    border: 2px solid #000;
+    
+    cursor: pointer;
+
+    background-image: linear-gradient(to right, #171717 50%, #fff 50%);
+    background-position: 100% 0%;
+    background-size: 200% 100%;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    color: aqua;
+    background-position: 0% 50%;
+}
+
+
