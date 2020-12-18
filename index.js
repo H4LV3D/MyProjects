@@ -1,6 +1,6 @@
 //Javascript for index.js and styles.css
 
-window.alert(40);
+//window.alert(40);
 
 
 
