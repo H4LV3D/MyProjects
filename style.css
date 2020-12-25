@@ -62,14 +62,14 @@
  
  @keyframes fadeOut {
     0% {opacity: 1;}
-    100% {opacity: 0;}
+    100% {opacity: 0; top: -700px;}
  }
  
  .load {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
-    z-index: -1;
  }
+
 
 
 
@@ -157,8 +157,8 @@ a{
     
 }
 .card:hover{
-    box-shadow: 5px 5px 25px rgba(0,0,0,.7);
-    top: -15px;
+    box-shadow: 8px 8px 30px rgba(0,0,0,.7);
+    top: -25px;
     left: auto;
 }
 @media screen and (min-width: 300px){
@@ -187,6 +187,7 @@ a{
     left: 0;
     top: 0;
     transition: all 800ms;
+    
 }
 .pic1:hover{
     opacity: 1;

@@ -1,7 +1,11 @@
 //Javascript for index.js and styles.css
-
+// window.alert(10);
 //window.alert(40);
-
+$(window).load(function(){
+$(".load").animate({
+    top: -1000
+}, 1500); 
+});
 
 
 //SELECTORS
