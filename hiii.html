@@ -4,31 +4,42 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="nation.css" rel="stylesheet">
-	<script>
-		// var loader = document.body.getElementsByClassName('loader');
-		// loader.delay(7000).fadeOut();
-		alert(10);
-	</script>
 
 	<title>Loader</title>
 </head>
 <body>
-<div class="load">
-	<div class="loader">
-		<img src="IMG-20200512-WA0012.jpg" class="pic1">
-		<br>
-		<h1 class="loaded">Loading...</h1>
-	</div>
+
+	<!-- <div class="box"></div> -->c="kink.jpg"
+	<div class="circle"></div>
+<!-- <div class="glass">
+	
+		<div class="boxed">
+			<h3 class="text">Glassmorphism</h3>
+			<p class="content">Lorem ipsum dolor, sit amet consectetur</p>
+		</div> -->
+
+<div class="logo">
+	<p class="col">D</p>
+	<p class="col">y</p>
+	<p class="col">n</p>
+	<p class="col">a</p>
+	<p class="col">m</p>
+	<p class="col">i</p>
+	<p class="col">x</p>
 </div>
-		<button class="btn" >Hover me</button>
-	<script>
-		var loader = document.body.getElementsByClassName('loader');
-		loader.delay(7000).fadeOut(slow);
-		alert(10);
-		function myFunction() {
-            location.reload();
-         }
-	</script>
+</div>
+
+</div>
+<script>
+var listItems;
+listItems = document.getElementsByClassName('col');
+var colors = ["#C2272D", "#F8931F", "#FFFF01", "#009245", "#0193D9", "#0C04ED", "#612F90"];
+
+for(var i = 0; i < colors.length; i ++) {
+  listItems[i].style.color = colors[i];    
+}
+</script>
+
 
 </body>
 </html>

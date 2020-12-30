@@ -24,6 +24,7 @@
 .load::after{
     content: '';
     opacity: 0;
+    
 }
 .div{
     position: fixed;
@@ -62,14 +63,14 @@
  
  @keyframes fadeOut {
     0% {opacity: 1;}
-    100% {opacity: 0; top: -700px;}
+    100% {opacity: 0;top: -700px;}
  }
  
  .load {
     -webkit-animation-name: fadeOut;
     animation-name: fadeOut;
+    z-index: 1;
  }
-
 
 
 
@@ -78,13 +79,16 @@ body{
     height: 100vh;
     width: 100%;
     padding: 20px 50px;
+    
     display: inline-block;
     align-items:center;
+    
+    
        
 }
-@media (min-width: 960px){
+@media screen and (max-width: 400px){
     container{
-        width: auto;
+       width: auto;
     }
 }
 
@@ -122,7 +126,7 @@ body{
     font-weight: 700;
     box-shadow: .5px .5px 5px 0px #322e2f;
     transition:  0.3s;
-
+    position: relative;
     background-image: linear-gradient(to right, #322e2f 50%, #12a4d9 50%);
     background-position: 100% 0%;
     background-size: 200% 100%;
@@ -154,19 +158,19 @@ a{
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgba(0,0,0,.9);
     text-align: center;
-    
+    position: relative;
+    backdrop-filter: blur(40px);
+    background-clip: padding-box;
+    border: 1px solid #322e2f;
+    transition: all 1.5s;
 }
 .card:hover{
-    box-shadow: 8px 8px 30px rgba(0,0,0,.7);
-    top: -25px;
+    box-shadow: 5px 5px 25px rgba(0,0,0,.7);
+    top: -15px;
     left: auto;
-}
-@media screen and (min-width: 300px){
-    card{
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
+    /* background: #55b9f3; */
+    box-shadow:  10px 10px 9px #489dcf, 
+             -10px -10px 9px #62d5ff;
 }
 .heading{
     font-style: italic;
@@ -180,20 +184,22 @@ a{
 .pic1{
     height: 200px;
     width: 200px;
-    
+    position: relative;
     border-radius: 20px;
     border: 5px solid #000;
     margin-top: 30px;
     left: 0;
     top: 0;
     transition: all 800ms;
-    
+    animation: fades 1s;
 }
+
 .pic1:hover{
     opacity: 1;
     transform: rotate(360deg);
     border-radius: 50%;
     filter: grayscale(100%);
+    
 }
 .title{
     font-family: 'Alegreya', bold;
@@ -214,7 +220,7 @@ a{
 
 /* CARD 3 */
 
-.skills{
+.skilled{
     font-family: 'Alegreya';
     font-style: bold;
     font-weight: 400;
@@ -227,20 +233,60 @@ a{
 
 /* CARD 4 */
 
-.html{
-    font-family: 'Lobster', cursive;
+.skills{
+    padding: 0px 20px;
+    min-width: 270px;
+
+}
+.skill-name{
+    font-size: 18px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    margin: 20px 0;
+
+}
+.skill-bar{
+    height: 20px;
+    background-color: rgb(251, 218, 218);
+    border-radius: 8px;
+
+}
+.skill-per{
+    height: 20px;
+    background-color: #0fbcf9;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+}
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: #000;
     color: #fff;
-    font-size: 25px;
-    
-    top: 0;
-    font-weight: 700;
-    margin: 0;
+    font-weight: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translate(50%);
+}
+.skill-per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -10px;
+    right: 0px;
+    transform: translate(50%) rotate(45deg);
+    border-radius: 2px;
 }
 
 /* Socials */
 
 .social-icons{
-    position: relative;
+    position: fixed;
     bottom: 0%;
     padding: 0 10px;
     display: flex;
@@ -250,7 +296,7 @@ a{
     cursor: pointer;
     color: black;
     border-radius: 10px;
-    padding: 0 5px;
+    padding: 0px 5px;
     transform: translate(0%, 0%);
 }
 .social-icons a i {
@@ -284,7 +330,41 @@ a{
 .social-icons a:nth-child(5) i:hover{
     background-color: #cd201f;
 }
+@media (max-width: 400px){
+    .social-icons{
+        position: relative;
+        bottom: 10px;
+        width: 100%;
+        padding: 0px 0px;
+    }
+    .divide{
+        margin: 20px 0px;
+        margin-left: 0;
 
+    }
+    body{
+       width: 100%;
+       padding: 0px 0px;
+       height: auto;
+       
+    }
+    .button{
+        
+        margin-left: 10%;
+    }
+    .card{
+        display: block;
+        margin-left: 0;
+        width: 90%;
+    }
+    .title{
+        margin: auto;
+    }
+    .button{
+        margin: 0;
+    }
+    
+}
 
 
 
