@@ -91,7 +91,7 @@ body{
 
 .navbar{
     width: 100%;
-    height: 15%;
+    height: 10%;
     align-items: center;
     display: flex;
     justify-content: space-between; 
@@ -282,7 +282,7 @@ a{
 /* Socials */
 
 .social-icons{
-    position: fixed;
+    position: relative;
     bottom: 0%;
     padding: 0 10px;
     display: flex;
@@ -326,6 +326,110 @@ a{
 .social-icons a:nth-child(5) i:hover{
     background-color: #cd201f;
 }
+
+
+.d{
+    animation: shadow-wave-d 2s linear infinite;
+}
+.y{
+    animation: shadow-wave-y 2s linear infinite;
+}
+.n{
+    animation: shadow-wave-n 2s linear infinite;
+}
+.a{
+    animation: shadow-wave-a 2s linear infinite;
+}
+.m{
+    animation: shadow-wave-m 2s linear infinite;
+}
+.i{
+    animation: shadow-wave-i 2s linear infinite;
+}
+.x{
+    animation: shadow-wave-x 2s linear infinite;
+}
+
+:root{
+    --primary: #22D2A0;
+    --secondary: #192824;
+    --back: #192824;
+    --green: #1FC11B;
+    --yellow: #FFD913;
+    --orange: #FF9C55;
+    --red: #FF5555;
+    --aqua: #00ffff;
+    --color: #fbff00;
+    --blue: #4614d1;
+  } 
+
+    @keyframes shadow-wave-d {
+        0%{color: var(--back);}
+        20%{color: var(--orange);}
+        40%{color: var(--red);}
+        60%{color: var(--yellow);}
+        80%{color: var(--green);}
+        100%{color: var(--color);}
+    }
+    @keyframes shadow-wave-y {
+        0%{color: var(--color);}
+        20%{color: var(--green);}
+        40%{color: var(--yellow);}
+        60%{color: var(--red);}
+        80%{color: var(--orange);}
+        100%{color: var(--back);}
+    }
+    @keyframes shadow-wave-n {
+        0%{color: var(--red);}
+        20%{color: var(--blue);}
+        40%{color: var(--orange);}
+        60%{color: var(--back);}
+        80%{color: var(--secondary);}
+        100%{color: var(--primary);}
+    }
+    @keyframes shadow-wave-a {
+        0%{color: var(--aqua);}
+        20%{color: var(--color);}
+        40%{color: var(--green);}
+        60%{color: var(--yellow);}
+        80%{color: var(--red);}
+        100%{color: var(--orange);}
+    }
+    @keyframes shadow-wave-m {
+        0%{color: var(--secondary);}
+        20%{color: var(--aqua);}
+        40%{color: var(--color);}
+        60%{color: var(--green);}
+        80%{color: var(--yellow);}
+        100%{color: var(--orange);}
+    }
+    @keyframes shadow-wave-i {
+        0%{color: var(--blue);}
+        20%{color: var(--secondary);}
+        40%{color: var(--aqua);}
+        60%{color: var(--color);}
+        80%{color: var(--orange);}
+        100%{color: var(--red);}
+    }
+    @keyframes shadow-wave-x {
+        0%{color: var(--orange);}
+        20%{color: var(--bac);}
+        40%{color: var(--secondary);}
+        60%{color: var(--aqua);}
+        80%{color: var(--red);}
+        100%{color: var(--blue);}
+    }
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 400px){
     .social-icons{
         position: relative;
@@ -350,15 +454,25 @@ a{
     }
     .card{
         display: block;
-        margin-left: 0;
-        width: 90%;
+        margin: 10px auto;
+        width: 85%;
     }
     .title{
         margin: auto;
     }
     .button{
         margin: 0;
+        opacity: 0;
     }
+    .navbar{
+        display: block;
+    }
+    .logo{
+        font-size: 3em;
+        left: 50%;
+        
+    }
+
     
 }
 

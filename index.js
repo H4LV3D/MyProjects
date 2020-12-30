@@ -1,5 +1,5 @@
 //Javascript for index.js and styles.css
-window.alert(10);
+
 $('.skill-per').each(function(){
     var $this = $(this);
     var per = $this.attr('per');
@@ -14,10 +14,6 @@ $('.skill-per').each(function(){
         }
     });
 });
-
-
-
-
 
 
 //SELECTORS
